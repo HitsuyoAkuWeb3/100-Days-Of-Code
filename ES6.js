@@ -7,8 +7,10 @@ Dynamically create strings using variables.*/
 // Example 1: Using Template Literals
 const firstName = 'John';
 const lastName = 'Doe';
+
 const fullNameConcat = firstName + ' ' + lastName; //Before ES6
 const fullNameLiteral = `${firstName} ${lastName}`; //After ES6. Used for string interpolation.
+
 console.log(fullNameLiteral); // John Doe
 console.log(fullNameConcat); // John Doe
 
@@ -24,3 +26,22 @@ const multilineStringOld =
 const multilineStringNew =
     `This is a string
     that spans multiple lines.`; //After ES6. Used for multi-line strings.
+
+/*2. Destructuring Objects: Allows unpacking values from arrays or properties from objects into distinct variables.
+Commonly used in conjuction with Promises and API calls.
+Why? Easier to extract values from complex data structures, such as API responses, which are often deeply nested JSON objects. 
+Also, it makes the code cleaner and more readable.*/
+// Example 2: Destructuring Objects
+const person = {
+    name: 'Alice',
+    age: 30,
+    address: {
+        city: 'New York',
+        state: 'NY'
+    }
+};
+
+const nameValue = person.name; //Before ES6. Accessing properties directly.
+const {name, address: {city}} = person; //After ES6. Destructuring assignment.
+console.log(nameValue); // Alice
+console.log(name); // Alice
