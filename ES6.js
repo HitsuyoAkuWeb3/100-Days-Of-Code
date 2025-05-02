@@ -8,12 +8,19 @@ Dynamically create strings using variables.*/
 const firstName = 'John';
 const lastName = 'Doe';
 const fullNameConcat = firstName + ' ' + lastName; //Before ES6
-const fullNameLiteral = `${firstName} ${lastName}`; //After ES6. Used for multi-line strings and string interpolation.
+const fullNameLiteral = `${firstName} ${lastName}`; //After ES6. Used for string interpolation.
 console.log(fullNameLiteral); // John Doe
 console.log(fullNameConcat); // John Doe
 
 const num1 = 5;
 const num2 = 10;
-const sum = `The sum of ${num1} and ${num2} is ${num1 + num2}`; //After ES6. Makes it easier to create strings with embedded expressions. 
+const sum = `The sum of ${num1} and ${num2} is ${num1 + num2}`; //After ES6. Create strings with embedded expressions. 
 console.log(sum); // The sum of 5 and 10 is 15
 
+const multilineStringOld = 
+    "This is a string \n" +
+    "that spans multiple lines."; //Before ES6
+
+const multilineStringNew =
+    `This is a string
+    that spans multiple lines.`; //After ES6. Used for multi-line strings.
