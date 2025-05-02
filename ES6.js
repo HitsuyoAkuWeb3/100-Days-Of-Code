@@ -27,10 +27,14 @@ const multilineStringNew =
     `This is a string
     that spans multiple lines.`; //After ES6. Used for multi-line strings.
 
-/*2. Destructuring Objects: Allows unpacking values from arrays or properties from objects into distinct variables.
+
+
+
+/*2. Destructuring Objects & Arrays: Allows unpacking values from arrays or properties from objects into distinct variables.
 Commonly used in conjuction with Promises and API calls.
 Why? Easier to extract values from complex data structures, such as API responses, which are often deeply nested JSON objects. 
 Also, it makes the code cleaner and more readable.*/
+
 // Example 2: Destructuring Objects
 const person = {
     name: 'Alice',
@@ -44,4 +48,13 @@ const person = {
 const nameValue = person.name; //Before ES6. Accessing properties directly.
 const {name, address: {city}} = person; //After ES6. Destructuring assignment.
 console.log(nameValue); // Alice
-console.log(name); // Alice
+console.log(`${name}`); // Alice
+
+// Example 3: Destructuring Arrays
+const numbers = [1, 2, 3, 4, 5];
+const firstNum = numbers[0]; //Before ES6. Accessing elements directly.
+const [first, second, ...rest] = numbers; //After ES6. Destructuring assignment + rest/spread operator. Variable assignment matches the index order of the array.
+console.log(firstNum); // 1
+console.log(first); // 1
+console.log(rest); // [3, 4, 5]
+
