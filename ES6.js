@@ -110,5 +110,6 @@ This is especially useful in larger applications where different teams might be 
 // Example 6: Import/Export
 import { data } from "index.js"; //Importing a module.
 
-const { hobbies } = data
+const { hobbies } = data //Destructuring the hobbies property from the imported data object.
+
 console.log(hobbies); // ['reading', 'traveling', 'coding']
