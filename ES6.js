@@ -67,7 +67,8 @@ function addressMaker1(address) {
         city: address.city,
         state: address.state,
         country: 'United States',
-    };    
+    };   
+    return `${newAddress.city}, ${newAddress.state}, ${newAddress.country}`; 
 } //Before ES6. Creating an object with properties that are derived from variables.
 
 const addressMaker2 = ({city, state}) => {
@@ -79,7 +80,24 @@ const addressMaker2 = ({city, state}) => {
         state,
         country: 'United States',
     }; 
-    
+
     return `${newAddress.city}, ${newAddress.state}, ${newAddress.country}`;
 
 } //After ES6. Object literal enhancements.
+
+addressMaker2({city: 'Los Angeles', state: 'CA'}); // Los Angeles, CA, United States
+
+/*4. Arrow Functions: Shorter syntax for writing function expressions.
+Used to create anonymous functions, especially in callbacks and higher-order functions.
+Why? Cleaner syntax, especially for short functions.
+Also, arrow functions do not have their own 'this' context, which can be useful in certain situations.
+This means that they inherit 'this' from the parent scope, making them more predictable in certain contexts.*/
+
+// Example 5: Arrow Functions
+const add = function(a, b) {
+    return a + b;
+}; //Before ES6. Regular function expression.
+
+const addBetter = (a, b) => a + b //After ES6. Arrow function with implicit return.
+
+const addTotal = (...nums) => nums.reduce((acc, num) => acc + num); //After ES6. Arrow function with rest parameter.
