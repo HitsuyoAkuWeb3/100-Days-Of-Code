@@ -56,3 +56,14 @@ const conditionalLog = (num, logr) => {
 };
 
 conditionalLog(5);
+
+export const data = {
+  name: 'John Doe',
+  age: 30,
+  city: 'New York',
+  country: 'USA',
+  hobbies: ['reading', 'traveling', 'coding'],
+  greet() {
+    console.log(`Hello, my name is ${this.name}`);
+  },
+};

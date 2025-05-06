@@ -101,3 +101,14 @@ const add = function(a, b) {
 const addBetter = (a, b) => a + b //After ES6. Arrow function with implicit return.
 
 const addTotal = (...nums) => nums.reduce((acc, num) => acc + num); //After ES6. Arrow function with rest parameter.
+
+/*5. Import/Export: Used to share code between different files/modules.
+Why? Helps in organizing code into reusable modules, making it easier to maintain and understand.
+Also, it allows for better separation of concerns, as different parts of the code can be developed and tested independently.
+This is especially useful in larger applications where different teams might be working on different modules.*/
+
+// Example 6: Import/Export
+import { data } from "index.js"; //Importing a module.
+
+const { hobbies } = data
+console.log(hobbies); // ['reading', 'traveling', 'coding']
