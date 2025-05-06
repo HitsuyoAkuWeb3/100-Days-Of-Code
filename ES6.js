@@ -70,13 +70,16 @@ function addressMaker1(address) {
     };    
 } //Before ES6. Creating an object with properties that are derived from variables.
 
-const addressMaker2 = (address) => {
-    const {city, state} = address;
+const addressMaker2 = ({city, state}) => {
+    //Using destructuring to extract properties from the address object.
+    //This allows us to create a new object with the same properties without repeating the variable names.
+
     const newAddress = {
         city,
         state,
         country: 'United States',
-    };
+    }; 
+    
     return `${newAddress.city}, ${newAddress.state}, ${newAddress.country}`;
 
 } //After ES6. Object literal enhancements.
