@@ -58,3 +58,25 @@ console.log(firstNum); // 1
 console.log(first); // 1
 console.log(rest); // [3, 4, 5]
 
+/*3. Object Literal: Simplifies object creation by allowing shorthand property names and method definitions.
+Used to create objects with properties that are derived from variables or functions.*/ 
+
+// Example 4: Object Literal Enhancements
+function addressMaker1(address) {
+    const newAddress = {
+        city: address.city,
+        state: address.state,
+        country: 'United States',
+    };    
+} //Before ES6. Creating an object with properties that are derived from variables.
+
+const addressMaker2 = (address) => {
+    const {city, state} = address;
+    const newAddress = {
+        city,
+        state,
+        country: 'United States',
+    };
+    return `${newAddress.city}, ${newAddress.state}, ${newAddress.country}`;
+
+} //After ES6. Object literal enhancements.
