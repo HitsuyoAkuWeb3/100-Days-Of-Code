@@ -108,8 +108,43 @@ Also, it allows for better separation of concerns, as different parts of the cod
 This is especially useful in larger applications where different teams might be working on different modules.*/
 
 // Example 6: Import/Export
-import { data } from "index.js"; //Importing a module.
+import { data } from "./index.js"; //Importing a module.
 
 const { hobbies } = data //Destructuring the hobbies property from the imported data object.
 
 console.log(hobbies); // ['reading', 'traveling', 'coding']
+
+/*6. Async/Await: Simplifies working with asynchronous code by allowing us to write asynchronous code in a synchronous style.
+Used to handle asynchronous operations, such as API calls or file I/O.
+Why? Makes it easier to read and understand asynchronous code, especially when dealing with multiple asynchronous operations.
+Also, it helps in avoiding callback hell, which can make code difficult to read and maintain.
+This is especially useful in modern web applications where asynchronous operations are common, such as fetching data from APIs or handling user interactions.*/
+
+// Example 7: Async/Await
+const apiURL = 'https://pokeapi.co/api/v2/pokemon/ditto'; //Example API URL
+const getPokemon = () => {
+    fetch(apiURL)
+        .then(res => res.json())
+        .then(data => {
+           console.log(data[0]);
+           
+        }).catch(err => {
+            console.error('Error fetching data:', err);
+        });
+        
+} //Before ES6. Using Promises to handle asynchronous operations.
+//getTop10Campers(); //Calling the function to fetch data.
+
+const getPokemonAsync = async () => {
+    try {
+        const response = await fetch(apiURL);
+        const data = await response.json();
+        const pokemon = data; //Destructuring the results property from the fetched data.
+        const { name, height, weight, moves, stats } = pokemon; //Destructuring the properties from the fetched data.
+        console.log(name, height, weight); //Logging the first result from the fetched data.
+    } 
+    catch (err) {
+        console.error('Error fetching data:', err);
+    }
+} //After ES6. Using async/await to handle asynchronous operations.
+getPokemonAsync(); //Calling the function to fetch data.
