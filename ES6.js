@@ -133,7 +133,7 @@ const getPokemon = () => {
         });
         
 } //Before ES6. Using Promises to handle asynchronous operations.
-//getTop10Campers(); //Calling the function to fetch data.
+//getPokemo(); //Calling the function to fetch data.
 
 const getPokemonAsync = async () => {
     try {
