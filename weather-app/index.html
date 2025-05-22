@@ -8,6 +8,31 @@
     <script src="index.js" defer></script>
 </head>
 <body>
+    <form action="" class="weatherform">
+        <input type="text" name="" id="cityInput" class="cityInput" placeholder="Enter city name">
+        <button type="submit" class="submitBtn">Get Weather</button>
+    </form>
+    <div class="weatherCard">
+        <h1 id="cityName" class="cityDisplay">
+            City Name
+        </h1>
+        <p id="temperature" class="tempDisplay">
+            Temperature: 0°C
+        </p>
+        <p id="humidity" class="humiDisplay">
+            Humidity: 0%
+        </p>
+        <p id="windSpeed" class="windDisplay">
+            Wind Speed: 0 m/s
+        </p>
+        <p id="description" class="descDisplay">
+            Description: Clear
+        </p>
+        <img id="weatherIcon" class="weatherIcon" src="" alt="Weather Icon">
+        <p id="error" class="errorDisplay">
+            Error: No error
+        </p>
     
+    </div>
 </body>
 </html>
