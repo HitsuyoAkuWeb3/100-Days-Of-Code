@@ -30,7 +30,7 @@ body{
     background-color: #218838;
 }
 .weatherCard{
-    background: linear-gradient(180deg, rgba(79, 79, 247, 0.745), rgb(246, 187, 78));
+    background: linear-gradient(180deg, rgba(99, 148, 238, 0.965), rgb(246, 187, 78));
     padding: 20px;
     display: flex;
     flex-direction: column;
