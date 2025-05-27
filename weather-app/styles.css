@@ -26,3 +26,6 @@ body{
     border-radius: 6px;
     cursor: pointer;
 }
+.submitBtn:hover{
+    background-color: #218838;
+}
