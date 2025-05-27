@@ -37,3 +37,7 @@ body{
     align-items: center;
     justify-content: center;
 }
+.weatherCard:hover{
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+}
